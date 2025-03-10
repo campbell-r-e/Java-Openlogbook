@@ -3,15 +3,17 @@ plugins {
     id 'application'
 }
 
-
 version = '1.0'
 
-
-sourceSets.main.java.srcDirs = ['src']
+sourceSets {
+    main {
+        java.srcDirs = ['src/main/java']
+        resources.srcDirs = ['src/main/resources']
+    }
+}
 
 def distDir = 'openlogbook/openlogbook/release'
 def libDir = 'lib'
-
 
 tasks.named('clean') {
     delete layout.buildDirectory
@@ -25,11 +27,8 @@ repositories {
 }
 
 dependencies {
-  
     implementation files("$libDir/skinlf.jar")
-   
 }
-
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
@@ -37,7 +36,6 @@ tasks.withType(JavaCompile).configureEach {
     targetCompatibility = JavaVersion.VERSION_1_8
     classpath = files(fileTree(dir: libDir, includes: ['*.jar']))
 }
-
 
 task copyIniFile(type: Copy) {
     from 'src/main/resources'
