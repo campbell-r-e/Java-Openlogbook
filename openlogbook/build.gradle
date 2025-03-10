@@ -49,8 +49,8 @@ task runnableJar(type: Jar) {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
         attributes(
-            'Main-Class': 'openlogbook.Genesis',  
-            'Class-Path': configurations.runtimeClasspath.files.collect { it.name }.join(' ')  // Ensure dependencies load correctly
+            'Main-Class': 'genesis',  
+            'Class-Path': configurations.runtimeClasspath.files.collect { "lib/" + it.name }.join(' ')  // Ensure dependencies load correctly
         )
     }
     from {
@@ -72,5 +72,5 @@ tasks.named('javadoc') {
 
 // Run the application
 application {
-    mainClass = 'openlogbook.Genesis'  
+    mainClass = 'genesis'  
 }
