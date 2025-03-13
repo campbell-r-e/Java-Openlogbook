@@ -17,10 +17,12 @@ def libDir = 'lib'
 repositories {
     mavenCentral()
     maven { url "https://repo1.maven.org/maven2/" }  
+    maven { url "https://mvnrepository.com/artifact/skinlf/skinlf" }
 }
 
 dependencies {
-    implementation files("$libDir/skinlf.jar")
+    implementation group: 'skinlf', name: 'skinlf', version: '1.2.3'
+
     implementation 'com.formdev:flatlaf:1.6.4'
     
 

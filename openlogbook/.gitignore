@@ -29,14 +29,12 @@ replay_pid*
 .project
 
 # User-specific configuration
-openlogbook.ini
 .classpath
 .project
 
 
 # Compiled class files
 *.class
-*.jar
 *.war
 *.ear
 
