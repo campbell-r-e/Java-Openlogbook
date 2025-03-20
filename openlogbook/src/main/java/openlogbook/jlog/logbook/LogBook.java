@@ -71,5 +71,5 @@ public interface LogBook extends Debugable {
     * @return an ADIF formatted String.
     */
    public String toAdifString() ;
-
+    
 }

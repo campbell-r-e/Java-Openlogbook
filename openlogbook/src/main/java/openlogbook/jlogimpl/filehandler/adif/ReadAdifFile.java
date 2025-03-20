@@ -26,6 +26,25 @@ import java.util.StringTokenizer;
  * @author KC0ZPS
  */
 public class ReadAdifFile implements ReadData {
+   // added 
+   private void skipHeader(BufferedReader reader) throws IOException {
+      StringBuilder buffer = new StringBuilder();
+      int ch;
+      while ((ch = reader.read()) != -1) {
+          buffer.append((char) ch);
+  
+          // Check if the buffer ends with "<EOH>"
+          if (buffer.toString().toUpperCase().contains("<EOH>")) {
+              break; // Done skipping header
+          }
+  
+          // Avoid holding the entire file in memory; trim buffer if large
+          if (buffer.length() > 1000) {
+              buffer.delete(0, buffer.length() - 5); // Keep last few chars
+          }
+      }
+  }
+  
 
    private File     _file ;
    
@@ -45,9 +64,13 @@ public class ReadAdifFile implements ReadData {
     * 
     * @throws Exception If something goes wrong with the reading of the data.
     */
+
+
+    
    public void execute(LogBook logBook) throws Exception {
       FileReader fileReader = new FileReader(_file);
       BufferedReader  bufferedReader = new BufferedReader (fileReader);
+      skipHeader(bufferedReader);
       
       int intValue ;
       boolean creatingToken = false ;

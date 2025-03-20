@@ -69,7 +69,8 @@ public class Band {
 
    public static final Band Blank    = new Band("") ;
    public static final Band Unknown  = new Band("Unknown") ;
-   public static final Band _2190m   = new Band("2190m") ;
+   public static final Band _2200m   = new Band("2200m") ;
+   public static final Band _630m   = new Band("630m") ;
    public static final Band _160m    = new Band("160m") ;
    public static final Band _80m     = new Band("80m") ;
    public static final Band _60m     = new Band("60m") ;
@@ -103,10 +104,11 @@ public class Band {
     */
    private static final Band _values[] = {
       Blank,
-      // _2190m,
+       _2200m,
+         _630m,
       _160m,
       _80m,
-      // _60m,
+       _60m,
       _40m,
       _30m,
       _20m,
@@ -115,7 +117,7 @@ public class Band {
       _12m,
       _10m,
       _6m,
-      // _4m,
+       _4m,
       _2m,
       _1_25m,
       _70cm,
@@ -139,34 +141,35 @@ public class Band {
     */
    private static final Object[][] _intlookupData = {
       {new Integer(0), Band.Blank},
-      // {new Integer(), Band._2190m},
-      {new Integer(1), Band._160m},
-      {new Integer(2), Band._80m},
-      // {new Integer(), Band._60m},
-      {new Integer(3), Band._40m},
-      {new Integer(4), Band._30m},
-      {new Integer(5), Band._20m},
-      {new Integer(6), Band._17m},
-      {new Integer(7), Band._15m},
-      {new Integer(8), Band._12m},
-      {new Integer(9), Band._10m},
-      {new Integer(10), Band._6m},
-      // {new Integer(), Band._4m},
-      {new Integer(11), Band._2m},
-      {new Integer(12), Band._1_25m},
-      {new Integer(13), Band._70cm},
-      {new Integer(14), Band._35cm},
-      {new Integer(15), Band._23cm},
-      {new Integer(16), Band._13cm},
-      {new Integer(17), Band._9cm},
-      {new Integer(18), Band._6cm},
-      {new Integer(19), Band._3cm},
-      {new Integer(20), Band._1_25cm},
-      {new Integer(21), Band._6mm},
-      {new Integer(22), Band._4mm},
-      {new Integer(23), Band._2_5mm},
-      {new Integer(24), Band._2mm},
-      {new Integer(25), Band._1mm}
+      {new Integer(1), Band._2200m},
+      {new Integer(2), Band._630m},
+      {new Integer(3), Band._160m},
+      {new Integer(4), Band._80m},
+       {new Integer(5), Band._60m},
+      {new Integer(6), Band._40m},
+      {new Integer(7), Band._30m},
+      {new Integer(8), Band._20m},
+      {new Integer(9), Band._17m},
+      {new Integer(10), Band._15m},
+      {new Integer(11), Band._12m},
+      {new Integer(12), Band._10m},
+      {new Integer(13), Band._6m},
+      {new Integer(14), Band._4m},
+      {new Integer(15), Band._2m},
+      {new Integer(16), Band._1_25m},
+      {new Integer(17), Band._70cm},
+      {new Integer(18), Band._35cm},
+      {new Integer(19), Band._23cm},
+      {new Integer(20), Band._13cm},
+      {new Integer(21), Band._9cm},
+      {new Integer(22), Band._6cm},
+      {new Integer(23), Band._3cm},
+      {new Integer(24), Band._1_25cm},
+      {new Integer(25), Band._6mm},
+      {new Integer(26), Band._4mm},
+      {new Integer(27), Band._2_5mm},
+      {new Integer(28), Band._2mm},
+      {new Integer(29), Band._1mm}
    } ;
 
    /**
@@ -175,10 +178,11 @@ public class Band {
    private static final Object[][] _strlookupData = {
       {new String(""), Band.Blank},
       {new String("Unknown"), Band.Unknown},
-      // {new String("2190m"), Band._2190m},
+      {new String("2200m"), Band._2200m},
+      {new String("630m"), Band._630m},
       {new String("160m"), Band._160m},      
       {new String("80m"), Band._80m},
-      // {new String("60m"), Band._60m},
+      {new String("60m"), Band._60m},
       {new String("40m"), Band._40m},
       {new String("30m"), Band._30m},
       {new String("20m"), Band._20m},
@@ -187,7 +191,7 @@ public class Band {
       {new String("12m"), Band._12m},
       {new String("10m"), Band._10m},
       {new String("6m"), Band._6m},
-      // {new String("4m"), Band._4m},
+      {new String("4m"), Band._4m},
       {new String("2m"), Band._2m},
       {new String("1.25m"), Band._1_25m},
       {new String("70cm"), Band._70cm},
