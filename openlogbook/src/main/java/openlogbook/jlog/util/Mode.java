@@ -141,7 +141,7 @@ public class Mode {
    public static final Mode THOR      = new Mode("THOR") ;
    public static final Mode DOMINO      = new Mode("DOMINO") ;
    public static final Mode FREEDV      = new Mode("FREEDV") ;
-   public static final Mode DSTAR      = new Mode("DSTAR") ;
+ 
    private static final Mode _values[] = {
       Blank,
       LSB,
@@ -186,7 +186,7 @@ public class Mode {
       THOR,
       DOMINO,
       FREEDV,
-      DSTAR
+      
    } ;
 
    /**
@@ -237,7 +237,6 @@ public class Mode {
       {new Integer(40), Mode.THOR},
       {new Integer(41), Mode.DOMINO},
       {new Integer(42), Mode.FREEDV},
-      {new Integer(43), Mode.DSTAR}
    } ;
    
      
@@ -288,7 +287,6 @@ public class Mode {
          {new String("WSPR"), Mode.WSPR},
          {new String("DOMINO"), Mode.DOMINO},
          {new String("FREEDV"), Mode.FREEDV},
-         {new String("DSTAR"), Mode.DSTAR}
    } ;
    
    private static final IntToObject _intToModeType = new IntToObject(_intlookupData, Mode.Unknown) ;
