@@ -98,8 +98,8 @@ public class Mode {
    //**********
    private String                    _description ;
    
- public static final Mode Blank        = new Mode("");          // app convenience
-public static final Mode Unknown      = new Mode("Unknown");   // optional app value
+ public static final Mode Blank        = new Mode("");          
+public static final Mode Unknown      = new Mode("Unknown");   
 
 public static final Mode SSB          = new Mode("SSB");
 public static final Mode CW           = new Mode("CW");
@@ -113,12 +113,12 @@ public static final Mode PACKET       = new Mode("PACKET");
 public static final Mode RTTY         = new Mode("RTTY");
 public static final Mode SSTV         = new Mode("SSTV");
 
-public static final Mode TOR          = new Mode("TOR");       // AMTOR/GTOR are submodes
-public static final Mode PACTOR       = new Mode("PACTOR");    // PAC2/PAC3 are submodes
+public static final Mode TOR          = new Mode("TOR");       
+public static final Mode PACTOR       = new Mode("PACTOR");    
 public static final Mode HELL         = new Mode("HELL");
-public static final Mode PSK          = new Mode("PSK");       // PSK31/63/125 are submodes
-public static final Mode MFSK         = new Mode("MFSK");      // MFSK8/16, FT8, FT4, MSK144, etc. are submodes
-public static final Mode DIGITALVOICE = new Mode("DIGITALVOICE"); // D-STAR/DMR/FreeDV are submodes
+public static final Mode PSK          = new Mode("PSK");       
+public static final Mode MFSK         = new Mode("MFSK");      
+public static final Mode DIGITALVOICE = new Mode("DIGITALVOICE"); 
 
  
   private static final Mode _values[] = {
