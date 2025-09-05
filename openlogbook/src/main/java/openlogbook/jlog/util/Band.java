@@ -70,6 +70,8 @@ public class Band {
    public static final Band Blank    = new Band("") ;
    public static final Band Unknown  = new Band("Unknown") ;
    public static final Band _2190m   = new Band("2190m") ;
+   public static final Band _630m   = new Band("630m") ;
+   public static final Band _560m   = new Band("560m") ;
    public static final Band _160m    = new Band("160m") ;
    public static final Band _80m     = new Band("80m") ;
    public static final Band _60m     = new Band("60m") ;
@@ -81,11 +83,12 @@ public class Band {
    public static final Band _12m     = new Band("12m") ;
    public static final Band _10m     = new Band("10m") ;
    public static final Band _6m      = new Band("6m") ;
+   public static final Band _5m      = new Band("5m") ;
    public static final Band _4m      = new Band("4m") ;
    public static final Band _2m      = new Band("2m") ;
    public static final Band _1_25m   = new Band("1.25m") ;
    public static final Band _70cm    = new Band("70cm") ;
-   public static final Band _35cm    = new Band("35cm") ;
+   public static final Band _33cm    = new Band("33cm") ;
    public static final Band _23cm    = new Band("23cm") ;
    public static final Band _13cm    = new Band("13cm") ;
    public static final Band _9cm     = new Band("9cm") ;
@@ -97,16 +100,19 @@ public class Band {
    public static final Band _2_5mm   = new Band("2.5mm") ;
    public static final Band _2mm     = new Band("2mm") ;
    public static final Band _1mm     = new Band("1mm") ;
+   public static final Band _submm    = new Band("submm") ;
    
    /**
     * These values MUST match _intlookupData.
     */
    private static final Band _values[] = {
       Blank,
-      // _2190m,
+       _2190m,
+         _630m,
+         _560m,
       _160m,
       _80m,
-      // _60m,
+       _60m,
       _40m,
       _30m,
       _20m,
@@ -115,11 +121,12 @@ public class Band {
       _12m,
       _10m,
       _6m,
-      // _4m,
+      _5m,
+       _4m,
       _2m,
       _1_25m,
       _70cm,
-      _35cm,
+      _33cm,
       _23cm,
       _13cm,
       _9cm,
@@ -130,7 +137,8 @@ public class Band {
       _4mm,
       _2_5mm,
       _2mm,
-      _1mm
+      _1mm,
+      _submm
    } ;
    
    /**
@@ -139,34 +147,38 @@ public class Band {
     */
    private static final Object[][] _intlookupData = {
       {new Integer(0), Band.Blank},
-      // {new Integer(), Band._2190m},
-      {new Integer(1), Band._160m},
-      {new Integer(2), Band._80m},
-      // {new Integer(), Band._60m},
-      {new Integer(3), Band._40m},
-      {new Integer(4), Band._30m},
-      {new Integer(5), Band._20m},
-      {new Integer(6), Band._17m},
-      {new Integer(7), Band._15m},
-      {new Integer(8), Band._12m},
-      {new Integer(9), Band._10m},
-      {new Integer(10), Band._6m},
-      // {new Integer(), Band._4m},
-      {new Integer(11), Band._2m},
-      {new Integer(12), Band._1_25m},
-      {new Integer(13), Band._70cm},
-      {new Integer(14), Band._35cm},
-      {new Integer(15), Band._23cm},
-      {new Integer(16), Band._13cm},
-      {new Integer(17), Band._9cm},
-      {new Integer(18), Band._6cm},
-      {new Integer(19), Band._3cm},
-      {new Integer(20), Band._1_25cm},
-      {new Integer(21), Band._6mm},
-      {new Integer(22), Band._4mm},
-      {new Integer(23), Band._2_5mm},
-      {new Integer(24), Band._2mm},
-      {new Integer(25), Band._1mm}
+      {new Integer(1), Band._2190m},
+      {new Integer(2), Band._630m},
+      {new Integer(3), Band._560m},
+      {new Integer(4), Band._160m},
+      {new Integer(5), Band._80m},
+      {new Integer(6), Band._60m},
+      {new Integer(7), Band._40m},
+      {new Integer(8), Band._30m},
+      {new Integer(9), Band._20m},
+      {new Integer(10), Band._17m},
+      {new Integer(11), Band._15m},
+      {new Integer(12), Band._12m},
+      {new Integer(13), Band._10m},
+      {new Integer(14), Band._6m},
+      {new Integer(15), Band._5m},
+      {new Integer(16), Band._4m},
+      {new Integer(17), Band._2m},
+      {new Integer(18), Band._1_25m},
+      {new Integer(19), Band._70cm},
+      {new Integer(20), Band._33cm},
+      {new Integer(21), Band._23cm},
+      {new Integer(22), Band._13cm},
+      {new Integer(23), Band._9cm},
+      {new Integer(24), Band._6cm},
+      {new Integer(25), Band._3cm},
+      {new Integer(26), Band._1_25cm},
+      {new Integer(27), Band._6mm},
+      {new Integer(28), Band._4mm},
+      {new Integer(29), Band._2_5mm},
+      {new Integer(30), Band._2mm},
+      {new Integer(31), Band._1mm},
+      {new Integer(32), Band._submm}
    } ;
 
    /**
@@ -175,10 +187,12 @@ public class Band {
    private static final Object[][] _strlookupData = {
       {new String(""), Band.Blank},
       {new String("Unknown"), Band.Unknown},
-      // {new String("2190m"), Band._2190m},
+      {new String("2190m"), Band._2190m},
+      {new String("630m"), Band._630m},
+      {new String("560m"), Band._560m},
       {new String("160m"), Band._160m},      
       {new String("80m"), Band._80m},
-      // {new String("60m"), Band._60m},
+      {new String("60m"), Band._60m},
       {new String("40m"), Band._40m},
       {new String("30m"), Band._30m},
       {new String("20m"), Band._20m},
@@ -187,11 +201,12 @@ public class Band {
       {new String("12m"), Band._12m},
       {new String("10m"), Band._10m},
       {new String("6m"), Band._6m},
-      // {new String("4m"), Band._4m},
+      {new String("5m"), Band._5m},
+      {new String("4m"), Band._4m},
       {new String("2m"), Band._2m},
       {new String("1.25m"), Band._1_25m},
       {new String("70cm"), Band._70cm},
-      {new String("35cm"), Band._35cm},
+      {new String("33cm"), Band._33cm},
       {new String("23cm"), Band._23cm},
       {new String("13cm"), Band._13cm},
       {new String("9cm"), Band._9cm},
@@ -202,7 +217,8 @@ public class Band {
       {new String("4mm"), Band._4mm},
       {new String("2.5mm"), Band._2_5mm},
       {new String("2mm"), Band._2mm},
-      {new String("1mm"), Band._1mm}
+      {new String("1mm"), Band._1mm},
+      {new String("1mm"), Band._submm}
    } ; 
    
    private static final IntToObject    _intToBandType = new IntToObject(_intlookupData, Band.Unknown) ;
